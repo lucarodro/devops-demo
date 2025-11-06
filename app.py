@@ -1,1 +1,2 @@
-print("Hello, DevOps")
+name = input("Enter your name: ")
+print(f"Hello, {name}! Welcome to DevOps")
