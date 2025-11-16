@@ -1,6 +1,10 @@
-from app import greet
+from app import greet, farewell
 
 
 def test_greet():
     assert greet("Alice") == "Hello, Alice!"
     assert greet("Bob") == "Hello, Bob!"
+
+
+def test_farewell():
+    assert farewell("Alice") == "Goodbye, Alice!"
