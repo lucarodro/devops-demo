@@ -1,2 +1,5 @@
-name = input("Enter your name: ")
-print(f"Hello, {name}! Welcome to DevOps")
+def greet(name):
+    return f"Hello, {name}!"
+
+if __name__ == "__main__":
+    print(greet("DevOps"))
