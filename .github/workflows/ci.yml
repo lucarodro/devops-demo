@@ -1,5 +1,11 @@
-name: CI
-on: [push, pull_request]
+name: Python CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
 jobs:
 
   build:
@@ -15,5 +21,13 @@ jobs:
       with:
         python-version: '3.10'
 
-    - name: Run script
-      run: python app.py < input.txt
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Run tests
+      run: pytests tests/
+    
+    - name: Lint configured
+      run: flake8
